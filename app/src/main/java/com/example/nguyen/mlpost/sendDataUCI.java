@@ -15,7 +15,7 @@ public class sendDataUCI extends StringRequest {
     private static final String SEND_UCI_REQUEST_URL = "http://node34.ecs.fullerton.edu/processInput.php";
     private Map<String,String> params;
 
-    public sendDataUCI(int in1, int in2, int in3, int in4, int in5, int in6, int in7, int in8, int in9, int in10, Response.Listener<String> listener){
+    public sendDataUCI(int in1, int in2, int in3, int in4, int in5, int in6, int in7, int in8, int in9, Response.Listener<String> listener){
         super(Method.POST, SEND_UCI_REQUEST_URL, listener, null);
         params = new HashMap<>();
         params.put("input1", in1 + "");
@@ -27,7 +27,6 @@ public class sendDataUCI extends StringRequest {
         params.put("input7", in7 + "");
         params.put("input8", in8 + "");
         params.put("input9", in9 + "");
-        params.put("input10", in10 + "");
 
     }
 

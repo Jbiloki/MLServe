@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
@@ -34,10 +35,12 @@ public class WebProcess extends AsyncTask<String, String, String> {
     private String result = "No Response Received";
     private TextView out;
 
+
+
     public WebProcess(Context context, View v){
         mContext=context;
         mView = v;
-        out = (TextView) v.findViewById(R.id.output);
+        out = (TextView) v.findViewById(R.id.out);
     }
     @Override
     protected void onPreExecute(){
@@ -46,19 +49,19 @@ public class WebProcess extends AsyncTask<String, String, String> {
     @Override
     protected String doInBackground(String... params){
         String urlString = params[0];
-        String resultToDisplay = "";
+        String inputs = params[1];
         InputStream in = null;
         try{
-            final int in1 = 1;
-            final int in2 = 1;
-            final int in3 = 1;
-            final int in4 = 1;
-            final int in5 = 1;
-            final int in6 = 1;
-            final int in7 = 1;
-            final int in8 = 1;
-            final int in9 = 1;
-            final int in10 = 1;
+            final int in1 = Character.getNumericValue(inputs.charAt(0));
+            final int in2 = Character.getNumericValue(inputs.charAt(1));
+            final int in3 = Character.getNumericValue(inputs.charAt(2));
+            final int in4 = Character.getNumericValue(inputs.charAt(3));
+            final int in5 = Character.getNumericValue(inputs.charAt(4));
+            final int in6 = Character.getNumericValue(inputs.charAt(5));
+            final int in7 = Character.getNumericValue(inputs.charAt(6));
+            final int in8 = Character.getNumericValue(inputs.charAt(7));
+            final int in9 = Character.getNumericValue(inputs.charAt(8));
+            Log.d("Input sent " , in1 + in2 + in3 + in4 + in5 + in6 + in7 + in8 + in9 + "");
 
             Response.Listener<String> responseListener = new Response.Listener<String>()
             {
@@ -77,9 +80,12 @@ public class WebProcess extends AsyncTask<String, String, String> {
                             else if(UCIResult.contains("4")){
                                 out.setText("The result shows cancer may be present.");
                             }
+                            else if(UCIResult == null){
+                                out.setText("Null Returned");
+                            }
                         }
                         else{
-                            Snackbar snackbar = Snackbar.make(mView , "Bad Request", Snackbar.LENGTH_LONG);
+                            Snackbar snackbar = Snackbar.make(mView , "Server Error", Snackbar.LENGTH_LONG);
                             snackbar.show();
                         }
                     }catch(JSONException e){
@@ -87,7 +93,7 @@ public class WebProcess extends AsyncTask<String, String, String> {
                     }
                 }
             };
-            sendDataUCI requestSend = new sendDataUCI(in1,in2,in3,in4,in5,in6,in7,in8,in9,in10,responseListener);
+            sendDataUCI requestSend = new sendDataUCI(in1,in2,in3,in4,in5,in6,in7,in8,in9,responseListener);
             RequestQueue queue = Volley.newRequestQueue(mContext);
             Log.d("Request",requestSend.toString());
             queue.add(requestSend);

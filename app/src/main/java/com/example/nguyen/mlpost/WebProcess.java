@@ -75,10 +75,10 @@ public class WebProcess extends AsyncTask<String, String, String> {
                         if(success){
                             String UCIResult = jsonResponse.getString("return");
                             if(UCIResult.contains("2")){
-                                out.setText("The result shows cancer may not be present.");
+                                out.setText("Result was negative.");
                             }
                             else if(UCIResult.contains("4")){
-                                out.setText("The result shows cancer may be present.");
+                                out.setText("Result was positive.");
                             }
                             else if(UCIResult == null){
                                 out.setText("Null Returned");

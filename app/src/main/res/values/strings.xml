@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">MLPost</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_ucitabs">UCITabs</string>
+    <string name="action_settings">Settings</string>
+    <string name="UCIExplaination">Breast Cancer Wisconsin Data Set: Explaination</string>
+    <string name="UCIExample">Breast Cancer Wisconsin Data Set: Example</string>
+    <string name="UCIDataSet">Data Set: breast-cancer-wisconsin data\n</string>
+    <string name="UCILearningMethod">Learning Method: MLP (Multilayer Perceptron)\n\nLearning Library: SKLearn\n</string>
+    <string name="UCIprocessing">Pre-processing:\n\tThe data directly from the repository has missing values, to compensate for this the values were replaced with zero.
+        I plain to create more methods of training to determine the most accurate, some of which will remove these rows of unknown
+        data rather than replacing them.\n</string>
+    <string name="UCItraining">Training:\n\tTraining is done by first shuffling the pre-processed data and seperating it into 50-25-25.
+        50 percent of our data is being used for training, 25 percent is being used for testing, and 25 percent is being used for validation to prevent overfitting.
+        The hidden layer has been set to 15 for this run as it has gotten the lowest error from testing. The activation function used was the logistic
+        function which is the sigmoid function.</string>
 </resources>

@@ -48,7 +48,7 @@ Prediciton screen with hint's to the parameters:
 
 Prediction for a negative result:
 
-![alt tag](http://i.imgur.com/RMVqSVl.png)
+![alt tag](http://i.imgur.com/5XBW1jG.png)
 
 Prediction for a positive result:
 

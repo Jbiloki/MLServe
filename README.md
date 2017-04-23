@@ -6,7 +6,7 @@ MLServe is an android application that was created to test machine learning impl
 
 # Current algorithms implemented:
 
-# # UCI Wisconsin Breast Cancer Data Set:
+## UCI Wisconsin Breast Cancer Data Set:
 
 This dataset is connected and can be used, on the server I have implemented an SVM with Sklearn.
 
@@ -14,11 +14,11 @@ Pre-processing: The data directly from the repository has missing values, to com
 
 Training is done by first shuffling the pre-processed data and seperating it into 50-25-25. 50 percent of our data is being used for training, 25 percent is being used for testing, and 25 percent is being used for validation to prevent overfitting.I am using a linear kernel with C = 20 (penalty parameter) and a random seed to further prevent overfitting.
 
-# # Next Steps:
+## Next Steps:
 
 For this data set I have to go though and do riggerous validation testing to ensure the network isn't overfitting. This current network is preliminary to test though the android device, next I will be, try using an SVM instead in order to ensure that I can get the larget margin possible between my classificaiton.
 
-# # # Update of testing:
+### Update of testing:
 
 First output: Confmat
 

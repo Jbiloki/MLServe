@@ -1,6 +1,6 @@
 # MLServe
 
-Using an android interface to communicate with a server to run inputs though an MLP.
+Using an android interface to communicate with a server to run inputs though a SVM.
 
 MLServe is an android application that was created to test machine learning implementation on android devices using a remote system to run the data though.
 
